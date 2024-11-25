@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        h2{
+            text-align:center;
+        }
+        
+        table{
+            border-collapse:collapse;
+            margin:20px auto;
+            text-align: center;
+        }
+
+        th{
+            padding:5px 30px;
+        }
+
+        table,th,td{
+            border:1px solid #000;
+        }
+    </style>
+  </head>
+  <body>
+    <h2>Order Payment Confirmation Page</h2>
+    <script>
+        //implicit conversion
+        let price = +prompt('Please enter the unit price: ')
+        let quantity = +prompt('Please enter the product quantity: ')
+        let address = prompt('Please enter the shipping address: ')
+
+        let totalPrice = price * quantity
+        document.write(`<table>
+        <tr>
+            <th>Product Name</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Shipping Address</th>
+        </tr>
+        <tr>
+            <td>Iphone 15</td>
+            <td>$${price}</td>
+            <td>${quantity}</td>
+            <td>$${totalPrice}</td>
+            <td>${address}</td>
+        </tr>
+    </table>`)
+    </script>
+  </body>
+</html>
