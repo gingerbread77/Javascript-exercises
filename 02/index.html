@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let balance = 100
+      while (true) {
+        let option = prompt(`Please select from the following options:
+      1. Deposit 
+      2. Withdraw 
+      3. Check balance 
+      4. Exit`)
+
+      if(option === '4'){
+        break
+      }
+        switch (option) {
+          case '1':
+            let deposit = +prompt('Please enter the amount of money to deposit: ')
+            balance += deposit
+            break
+            case '2':
+              let withdraw = +prompt('Please enter the amount of money to withdraw: ')
+              balance-=withdraw
+              break
+              case '3':
+                alert(`Your account balance is: $${balance}.`)
+                break
+                default:
+                  alert('Invalid input. Please try again.')
+        }
+      }
+    </script>
+  </body>
+</html>
